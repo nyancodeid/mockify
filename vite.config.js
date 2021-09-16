@@ -16,12 +16,12 @@ export default defineConfig({
     Icons(),
     VitePWA({
       manifest: {
-        name: "InstaShare - Instant File Sharing",
-        short_name: "InstaShare",
-        description : "Instant File Sharing powered by IPFS Protocol",
-        theme_color: "#212121",
+        name: "Mockify - Mockup Design",
+        short_name: "Mockify",
+        description : "Mockup your Design for Instantly Shareable Images",
+        theme_color: "#111827",
         registerType: "autoUpdate",
-        includeAssets: ['/favicon.svg'],
+        includeAssets: ['/favicon.ico'],
         icons: [
           {
             src: "/icons/icon-192x192.png",
