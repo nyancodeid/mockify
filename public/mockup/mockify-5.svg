@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1600px" height="1200px" viewBox="0 0 1600 1200" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.1 (67048) - http://www.bohemiancoding.com/sketch -->
+    <defs>
+        <rect id="path-1" x="0" y="0" width="1600" height="1200"></rect>
+    </defs>
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g>
+            <g>
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <use id="Mask" fill="#E6E7EF" xlink:href="#path-1"></use>
+                <circle id="Oval" stroke="#0260EE" stroke-width="98" mask="url(#mask-2)" cx="0" cy="-162" r="370"></circle>
+                <circle id="Oval-Copy" stroke="#0260EE" stroke-width="98" mask="url(#mask-2)" cx="1600" cy="1409" r="370"></circle>
+            </g>
+        </g>
+    </g>
+</svg>

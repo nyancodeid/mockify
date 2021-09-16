@@ -1,0 +1,316 @@
+* {
+  font-family: 'IBM Plex Mono', monospace;
+  letter-spacing: 0.05786em;
+}
+
+body {
+  background-color: #FFFFFF;
+
+  --dark-color: rgb(250, 145, 25);
+  --secondary-color: rgb(250, 145, 25);
+  --contrast-color: black;
+  --icon-color: #f97316;
+  --preload-color: #f5f5f5;
+
+  --gradient-50: rgb(255, 242, 203);
+  --gradient-100: rgb(254, 236, 181);
+  --gradient-200: rgb(253, 224, 134);
+  --gradient-300: rgb(253, 213, 87);
+  --gradient-400: rgb(253, 202, 54);
+  --gradient-500: rgb(252, 193, 36);
+  --gradient-600: rgb(252, 180, 31);
+  --gradient-700: rgb(251, 161, 28);
+  --gradient-800: rgb(250, 145, 25);
+  --gradient-900: rgb(249, 115, 22);
+
+  --box-shadow: 0 1px 1px hsl(0deg 0% 0% / 0.075),
+    0 2px 2px hsl(0deg 0% 0% / 0.075),
+    0 4px 4px hsl(0deg 0% 0% / 0.075),
+    0 8px 8px hsl(0deg 0% 0% / 0.075),
+    0 16px 16px hsl(0deg 0% 0% / 0.07);
+
+  padding: 0;
+  margin: 0;
+
+  color: var(--contrast-color);
+
+  &.dark-theme {
+    background-color: rgb(17, 24, 39);
+
+    --dark-color: rgb(49, 36, 200);
+    --secondary-color: rgb(202, 202, 250);
+    --contrast-color: white;
+    --icon-color: #1ce7b4;
+    --preload-color: #212121;
+
+    --gradient-100: rgb(234, 240, 255);
+    --gradient-200: rgb(224, 230, 252);
+    --gradient-300: rgb(207, 214, 235);
+    --gradient-400: rgb(171, 178, 198);
+    --gradient-500: rgb(139, 145, 165);
+    --gradient-600: rgb(99, 105, 124);
+    --gradient-700: rgb(80, 86, 104);
+    --gradient-800: rgb(49, 56, 73);
+    --gradient-900: rgb(17, 24, 39);
+  }
+}
+
+html,
+body,
+#app {
+  height: 100%;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+}
+
+#modal {
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  align-content: flex-start;
+  justify-content: center;
+  align-items: center;
+
+  background-color: rgba(255, 255, 255, 0.25);
+
+  transform: scale(1);
+
+  &:not(.active) {
+    transition-delay: .2s;
+    transform: scale(0);
+  }
+
+  .modal {
+    padding: 16px;
+    box-shadow: 0 11px 15px -7px rgb(0 0 0 / 20%),
+    0px 24px 38px 3px rgb(0 0 0 / 14%), 0px 9px 46px 8px rgb(0 0 0 / 12%);
+
+    border-radius: 0.5em;
+
+    &[tabindex] {
+      outline: none !important;
+    }
+
+    .modal-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .modal-header--action {
+        display: flex;
+        align-items: center;
+
+        .icon {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+.emoji {
+  font-family: emoji, sans-serif;
+}
+
+.icon-color {
+  color: var(--icon-color);
+}
+.icon {
+  width: 18px;
+  height: 18px;
+  display: block;
+  background-position: center;
+  background-size: contain;
+  cursor: pointer;
+
+  &.no-pointer {
+    cursor: default;
+  }
+}
+
+.notyf .notyf__message {
+  font-size: .8rem;
+}
+
+select,
+input[type=text],
+input[type=number],
+button {
+  outline: none;
+  border: none;
+}
+
+select,
+input[type=text],
+input[type=number] {
+  background-color: #FFFFFF;
+  padding: 8px 12px;
+  border-radius: 6px;
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
+}
+
+button {
+  background: var(--gradient-300);
+  padding: 8px 16px;
+  border-radius: 6px;
+
+  cursor: pointer;
+
+  &.btn-transparent {
+    background: rgba(255, 255, 255, .5);
+  }
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+@media only screen and (max-width: 768px) {
+  #app {
+    padding: 1rem;
+    height: calc(100% - 2rem);
+
+    #header {
+      padding: 0 0 .8em 0;
+      border-bottom: none;
+      flex-direction: column;
+
+      .header-title {
+        width: 100%;
+        margin-bottom: 8px;
+
+        h1 {
+          font-size: 1.5em;
+        }
+
+        span {
+          font-size: .8em;
+        }
+      }
+
+      .header-menu {
+        width: 100%;
+
+        nav {
+          text-align: left;
+          padding: 8px 0;
+          width: 100%;
+
+          >a {
+            font-size: .83em;
+            margin-right: 12px;
+
+            &.active {
+              font-weight: bold;
+            }
+          }
+          > i {
+            flex: 1;
+            display: flex;
+            justify-content: flex-end;
+          }
+        
+        }
+
+        .icon.icon-lg {
+          position: fixed;
+          top: 1em;
+          right: 1em;
+        }
+      }
+    }
+
+    #content {
+      height: auto;
+
+      .main {
+        align-items: flex-start;
+        flex-direction: column;
+
+        section.result {
+          width: 100%;
+          overflow-y: hidden;
+
+          .result-wrapper {
+            margin: 0;
+            max-width: 100%;
+
+            #input {
+              width: calc(100% - 8em);
+            }
+
+            .result-action {
+              background-color: var(--dark-color);
+              padding: 8px;
+              border-radius: 8px;
+            }
+
+            .result-preload.active {
+              width: 95%;
+            }
+          }
+        }
+        section.controller {
+          width: calc(100% - 2em);
+        }
+
+        .main-content {
+          position: relative;
+          width: 100%;
+          flex-direction: column;
+          box-shadow: none;
+
+          section {
+            width: 100%;
+            border-radius: 1rem;
+            margin-bottom: 1rem;
+            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
+
+            &#about {
+              width: 100%;
+
+              p {
+                font-size: .9rem;
+              }
+            }
+          }
+        }
+        .main-content--shadow {
+          width: 100%;
+          height: 250px;
+        }
+      }
+    }
+  }
+
+  body.dark-theme {
+    section#content .main {
+      .main-content {
+        section {
+          &#panel-result {
+            background-color: var(--gradient-800);
+          }
+        }
+      }
+    }
+  }
+}
