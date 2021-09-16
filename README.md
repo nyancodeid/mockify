@@ -37,9 +37,8 @@ $ npm run build
 ```
 
 ## Screenshot
-This image also hosted on IPFS Network using this web-app.
+This image also can hosted (instan share) powered by IPFS Network using this web-app.
 
 <p align="center">
-    <img alt="InstaShare" src="https://cloudflare-ipfs.com/ipfs/bafkreic5xizwysdytvruycz2xcldf3z2sc4oxx56hdpdwajvfuiwlktygy" style="width: 80%" />
-    <img alt="InstaShare" src="https://cloudflare-ipfs.com/ipfs/bafkreidmwvic3klkj7rom6frfcvift2u74jtggiz2z3mnvymduroljduci" style="width: 80%" />
+    <img alt="Mockify" src="https://cloudflare-ipfs.com/ipfs/QmQbT9reQ7Mad4WxGrtQZqtgRf4M5U4NvTJkgbRvXQcgVX" style="width: 80%" />
 </p>
