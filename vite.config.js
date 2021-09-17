@@ -21,7 +21,7 @@ export default defineConfig({
         description : "Mockup your Design for Instantly Shareable Images",
         theme_color: "#111827",
         registerType: "autoUpdate",
-        includeAssets: ['/favicon.ico'],
+        includeAssets: ['/favicon.ico', '/background.webp'],
         icons: [
           {
             src: "/icons/icon-192x192.png",

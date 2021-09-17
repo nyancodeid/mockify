@@ -38,6 +38,8 @@ import ChromeHeader from "@src/components/Headers/Chrome.vue";
 import WindowHeader from "@src/components/Headers/Window.vue";
 import { ImageIcon, IconReset } from "@src/components/Icons.js";
 
+import BackgroundImage from "@src/assets/background.webp";
+
 export default {
   name: "Workspace",
   components: {
@@ -52,6 +54,10 @@ export default {
     if (!this.$refs.image.src && this.hasImage) {
       this.hasImage = false;
     }
+
+    this.$nextTick(function () {
+      document.querySelector("section.result").style.backgroundImage = `url('${BackgroundImage}')`;
+    });
   },
   computed: {
     ...mapState(useMock, [ "isWorking", "options" ]),
@@ -145,7 +151,6 @@ section.result {
 
   padding: 30px 0;
 
-  background-image: url('/background.webp');
   background-position: center;
   background-size: contain;
 
