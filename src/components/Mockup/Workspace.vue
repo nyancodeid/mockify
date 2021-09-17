@@ -2,7 +2,7 @@
   <section class="result">
     <div class="result-wrapper">
       <div id="input" v-if="!hasImage">
-        <input type="file" id="image" v-on:change="onImage" />
+        <input type="file" id="image" accept="image/*" v-on:change="onImage" />
         <img src="/icons/icon-180x180.png" alt="Mockify Icons">
 
         <p>Drag and drop your file, paste from clipboard, or</p>
