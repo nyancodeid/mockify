@@ -145,7 +145,7 @@ section.result {
 
   padding: 30px 0;
 
-  background-image: url('/background.png');
+  background-image: url('/background.webp');
   background-position: center;
   background-size: contain;
 
